@@ -1,0 +1,20 @@
+<p>fulldata works!</p>
+<div *ngIf="arrdata">data length = {{arrdata.length}}</div>
+<table>
+  <tr>
+    <th> Panel name  </th>
+    <th>Mac Id</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th>Location icon</th>
+  </tr>
+
+  <tr *ngFor="let d of arrdata">
+    <td><a [routerLink]="" (click) = "openDialog(d)">{{ d.panel_name }}</a></td>
+    <td>{{ d.mac_id }}</td>
+    <td>{{ d.Lat }}</td>
+    <td>{{ d.Lng }}</td>
+    <td><a [routerLink]="" (click) = "openMap(d)"><mat-icon> place</mat-icon></a></td>
+  </tr>
+  
+</table>
